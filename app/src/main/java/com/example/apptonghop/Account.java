@@ -4,6 +4,7 @@ import java.io.Serializable;
 
 public class Account implements Serializable {
     private String taiKhoan;
+    private String matKhau;
 
     public Account(String taiKhoan, String matKhau) {
         this.taiKhoan = taiKhoan;
@@ -13,8 +14,6 @@ public class Account implements Serializable {
     public Account(){
 
     }
-
-    private String matKhau;
 
     public String getTaiKhoan() {
         return taiKhoan;

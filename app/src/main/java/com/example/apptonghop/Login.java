@@ -1,7 +1,12 @@
 package com.example.apptonghop;
 
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -32,12 +37,11 @@ public class Login extends AppCompatActivity {
         user = (EditText) findViewById(R.id.inputUsername);
         pass = (EditText) findViewById(R.id.inputPassword);
 
-//        if getData != null {
-//        Intent getData = getIntent();
-//        Bundle getDataBundle = getData.getBundleExtra("newAccount");
-//        Account newAcc = (Account) getDataBundle.getSerializable("accnew");
-//
-//        admin.add(newAcc);
+//        Intent intent = getIntent();
+//        if(intent != null) {
+//            Account newAcc = (Account) intent.getSerializableExtra("newAccount");
+//            admin.add(newAcc);
+//        }
 
         btLogin = (Button) findViewById(R.id.btnLogin);
         btLogin.setOnClickListener(new View.OnClickListener() {
@@ -58,7 +62,7 @@ public class Login extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent mhRegis = new Intent(Login.this,Register.class);
-                startActivity(mhRegis);
+                getResult.launch(mhRegis);
             }
         });
     }
@@ -75,4 +79,23 @@ public class Login extends AppCompatActivity {
         }
         return check;
     }
+    private ActivityResultLauncher<Intent> getResult = registerForActivityResult(
+            new ActivityResultContracts.StartActivityForResult(),
+            new ActivityResultCallback<ActivityResult>() {
+                @Override
+                public void onActivityResult(ActivityResult result) {
+                    if (result.getResultCode() == Activity.RESULT_OK){
+                        Intent data = result.getData();
+                        Bundle dataBundle = data.getBundleExtra("bundle");
+                        Account newacc = (Account) dataBundle.getSerializable("accnew");
+                        admin.add(newacc);
+                        user.setText(newacc.getTaiKhoan());
+                        pass.setText(newacc.getMatKhau());
+                    }
+                    if (result.getResultCode() == Activity.RESULT_CANCELED){
+                        Toast.makeText(Login.this,"Bạn chưa tạo tài khoản",Toast.LENGTH_SHORT).show();
+                    }
+                }
+            }
+    );
 }

@@ -5,20 +5,22 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 public class Information extends AppCompatActivity {
-    LinearLayout backHome;
-    ImageView logOut;
+    ImageView backHome;
+    Button logOut;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_information);
         getSupportActionBar().hide();
 
-        backHome = (LinearLayout) findViewById(R.id.BackToHome);
-        logOut = (ImageView) findViewById(R.id.Logout);
+        backHome = (ImageView) findViewById (R.id.BackToHome);
+        logOut = (Button) findViewById(R.id.Logout);
 
         backHome.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,6 +34,7 @@ public class Information extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Information.this, Login.class);
+                Toast.makeText(Information.this, "Đăng Xuất!!", Toast.LENGTH_SHORT).show();
                 startActivity(intent);
             }
         });

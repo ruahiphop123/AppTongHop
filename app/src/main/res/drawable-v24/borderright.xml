@@ -4,7 +4,7 @@
     <item android:left="-10dp" android:bottom="-10dp" android:top="-10dp">
         <shape
             android:shape="rectangle">
-            <stroke android:width="2dp" android:color="@color/white" />
+            <stroke android:width="0.5dp" android:color="#BABABA" />
             <!--This is the main background -->
         </shape>
     </item>

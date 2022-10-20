@@ -4,9 +4,19 @@
     <string name="tv2"><b>Môn học:</b>\nAndroid</string>
     <string name="tv3"><b>GVHD:</b>\nĐỗ Phú Huy</string>
     <string name="back">Back</string>
-    <string name="email"><b>Email</b>: ricenguyen2310@gmail.com</string>
+    <string name="git"><b>Git</b>: github.com/ruahiphop123</string>
     <string name="phone"><b>Phone</b>: 0906231002</string>
     <string name="msv"><b>MSV</b>: 2050531200131</string>
     <string name="fb"><b>Facebook</b>: fb.com/cathoiloine</string>
     <string name="login_no">Dont you have an account?<b>Sign up</b></string>
+    <string name="title_activity_chi_tiet_phim">ChiTietPhim</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="welcome">Xin chào, <b>Đức</b></string>
 </resources>

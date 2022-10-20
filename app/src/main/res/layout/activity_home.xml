@@ -5,78 +5,207 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Home"
-    android:background="@drawable/background_home">
+    android:background="#F1F0F0">
 
 
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="TRANG CHỦ"
-        android:textSize="30sp"
-        android:textColor="#E33771"
-        android:fontFamily="sans-serif-black"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="415dp"
+        android:layout_height="100dp"
+        android:background="@drawable/background_top_home"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <LinearLayout
-        android:id="@+id/Profile_Home"
-        android:layout_width="200dp"
-        android:layout_height="250dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="120dp"
-        android:orientation="vertical"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8">
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/welcome"
+            android:textSize="23sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName"
+            android:layout_width="350dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/background_edittext_search"
+            android:drawableRight="@drawable/ic_baseline_search_24"
+            android:ems="10"
+            android:hint="Tìm kiếm"
+            android:inputType="textPersonName"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
         <androidx.constraintlayout.utils.widget.ImageFilterView
-            android:id="@+id/imageView6"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            app:roundPercent="1"
-            android:layout_weight="1"
+            android:id="@+id/imgViewToProfile"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
             android:scaleType="centerCrop"
-            app:srcCompat="@drawable/profile_img" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:roundPercent="1"
+            app:srcCompat="@drawable/avt" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/phimHot_Home"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/imageView9"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            app:roundPercent="@integer/material_motion_duration_long_2"
+            app:srcCompat="@drawable/img_phimhot" />
+
         <TextView
             android:id="@+id/textView9"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Profile"
-            android:textColor="#FF7A22"
+            android:gravity="center"
+            android:textSize="19sp"
             android:textStyle="bold"
-            android:textSize="25sp"
-            android:gravity="center" />
+            android:textColor="@color/black"
+            android:fontFamily="serif"
+            android:text="Phim Hot" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/listItem_Home"
-        android:layout_width="200dp"
-        android:layout_height="250dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="120dp"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="45dp"
         android:orientation="vertical"
-        app:layout_constraintStart_toEndOf="@+id/Profile_Home"
-        app:layout_constraintTop_toBottomOf="@+id/textView8">
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+
         <androidx.constraintlayout.utils.widget.ImageFilterView
-            android:id="@+id/imageView7"
+            android:id="@+id/imageView10"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            app:roundPercent="1"
-            android:layout_weight="1"
-            android:scaleType="centerCrop"
-            app:srcCompat="@drawable/list_img" />
+            android:layout_height="100dp"
+            app:srcCompat="@drawable/img_phimanime" />
+
         <TextView
             android:id="@+id/textView10"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="List"
-            android:textColor="#FF7A22"
+            android:gravity="center"
+            android:textSize="19sp"
             android:textStyle="bold"
-            android:textSize="25sp"
-            android:gravity="center" />
+            android:textColor="@color/black"
+            android:fontFamily="serif"
+            android:text="Phim Anime" />
     </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phimHot_Home">
+
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            app:srcCompat="@drawable/img_phimyeuthich" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:gravity="center"
+            android:text="Yêu Thích"
+            android:textColor="@color/black"
+            android:textSize="19sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Profile_Home"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="45dp"
+        android:orientation="vertical"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listItem_Home">
+
+        <ImageView
+            android:id="@+id/imageView12"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            app:srcCompat="@drawable/img_profile" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:fontFamily="serif"
+            android:text="Tài Khoản"/>
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="350dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/background_home_banner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/imageView13"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/img_banner" />
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="TỔNG HỢP NHỮNG BỘ PHIM THỊNH HÀNH NHẤT HIỆN NAY"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageView13"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
