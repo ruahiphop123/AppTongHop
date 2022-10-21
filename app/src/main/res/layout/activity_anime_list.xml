@@ -6,7 +6,6 @@
     android:layout_height="wrap_content"
     tools:context=".Anime">
 
-
     <ListView
         android:id="@+id/listViewNguoi"
         android:layout_width="match_parent"
@@ -17,10 +16,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3" />
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout5" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout3"
+        android:id="@+id/constraintLayout5"
         android:layout_width="415dp"
         android:layout_height="68dp"
         android:background="@drawable/gradient_background"
@@ -30,11 +29,11 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/textView12"
+            android:id="@+id/TitleHot"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-black"
-            android:text="PHIM ANIME"
+            android:text="PHIM HOT"
             android:textColor="@color/black"
             android:textSize="25sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -51,7 +50,5 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_back_black" />
-
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

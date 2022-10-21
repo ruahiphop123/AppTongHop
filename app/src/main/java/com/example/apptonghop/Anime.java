@@ -25,12 +25,11 @@ public class Anime extends AppCompatActivity {
 
         AnhXa();
 
-        backHome = findViewById(R.id.imgAnimeBackToHome);
+        backHome = (ImageView) findViewById(R.id.imgAnimeBackToHome);
         backHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Anime.this, Home.class);
-                startActivity(intent);
+                finish();
             }
         });
 
@@ -52,13 +51,13 @@ public class Anime extends AppCompatActivity {
         lvNguoi = (android.widget.ListView) findViewById(R.id.listViewNguoi);
         arrayPhim = new ArrayList<>();
         //ten, tyoi, gioi tinh, img, mota
-        arrayPhim.add(new Phim("Naruto Shippuden", "Bộ phim hoạt hình nổi tiếng Naruto, lấy bối cảnh hai năm rưỡi sau khi Naruto rời làng Lá.", R.drawable.anh1));
-        arrayPhim.add(new Phim("Naruto Movie", "Ngoại truyện của bộ phim Naruto, khi Naruto và nhóm bạn đi đến làng Tuyết.", R.drawable.anh2));
-        arrayPhim.add(new Phim("Boruto: Naruto Next Generation","Thế hệ sau của Naruto, bộ phim vẫn lấy bối cảnh là thế giới Ninja nhưng nhân vật chính lần này lại là Uzumaki Boruto,", R.drawable.anh3));
-        arrayPhim.add(new Phim("Assassination Classroom", "Lãnh đạo các nước đều giao trách nhiệm ám sát Koro-Sensei cho Lớp 3-E và giao vũ khí đặc biệt cho họ", R.drawable.anh4));
-        arrayPhim.add(new Phim("OnePiece", "Phim Đảo Hải Tặc mở đầu câu chuyện bằng cảnh xử tử vua hải tặc Gol D. Roger. Trước khi chết ông đã tiết lộ rằng mình có một kho báu...", R.drawable.anh5));
-        arrayPhim.add(new Phim("Thất hình đại tội","Một nhóm chiến binh có tham vọng lật đổ vương quốc Britannia, được cho là đã bị tiêu diệt bởi các hiệp sĩ thánh chiến", R.drawable.anh6));
-        arrayPhim.add(new Phim("Doraemon: Vương quốc trên mây","Nobita muốn được đến thiên đường trên chín tầng mây, nơi mà cậu thường nghe nói đến trong truyện cổ tích", R.drawable.anh7));
+        arrayPhim.add(new Phim("Naruto Shippuden", "Bộ phim hoạt hình nổi tiếng Naruto, lấy bối cảnh hai năm rưỡi sau khi Naruto rời làng Lá.", R.drawable.anh1,false));
+        arrayPhim.add(new Phim("Naruto Movie", "Ngoại truyện của bộ phim Naruto, khi Naruto và nhóm bạn đi đến làng Tuyết.", R.drawable.anh2,true));
+        arrayPhim.add(new Phim("Boruto: Naruto Next Generation","Thế hệ sau của Naruto, bộ phim vẫn lấy bối cảnh là thế giới Ninja nhưng nhân vật chính lần này lại là Uzumaki Boruto,", R.drawable.anh3,true));
+        arrayPhim.add(new Phim("Assassination Classroom", "Lãnh đạo các nước đều giao trách nhiệm ám sát Koro-Sensei cho Lớp 3-E và giao vũ khí đặc biệt cho họ", R.drawable.anh4,false));
+        arrayPhim.add(new Phim("OnePiece", "Phim Đảo Hải Tặc mở đầu câu chuyện bằng cảnh xử tử vua hải tặc Gol D. Roger. Trước khi chết ông đã tiết lộ rằng mình có một kho báu...", R.drawable.anh5,true));
+        arrayPhim.add(new Phim("Thất hình đại tội","Một nhóm chiến binh có tham vọng lật đổ vương quốc Britannia, được cho là đã bị tiêu diệt bởi các hiệp sĩ thánh chiến", R.drawable.anh6,false));
+        arrayPhim.add(new Phim("Doraemon: Vương quốc trên mây","Nobita muốn được đến thiên đường trên chín tầng mây, nơi mà cậu thường nghe nói đến trong truyện cổ tích", R.drawable.anh7,false));
 
     }
     //ten, tyoi, gioi tinh, img, mota

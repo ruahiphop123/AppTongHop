@@ -5,12 +5,22 @@ import java.io.Serializable;
 public class Phim implements Serializable {
     private String hoTen;
     private String moTa;
+    private boolean yeuThich;
     private int img;
 
-    public Phim(String hoTen, String moTa, int img) {
+    public Phim(String hoTen, String moTa, int img,  boolean yeuThich) {
         this.hoTen = hoTen;
         this.moTa = moTa;
+        this.yeuThich = yeuThich;
         this.img = img;
+    }
+
+    public boolean isYeuThich() {
+        return yeuThich;
+    }
+
+    public void setYeuThich(boolean yeuThich) {
+        this.yeuThich = yeuThich;
     }
 
     public Phim() {

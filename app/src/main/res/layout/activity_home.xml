@@ -21,7 +21,7 @@
             android:id="@+id/textView8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="28dp"
+            android:layout_marginStart="48dp"
             android:layout_marginTop="16dp"
             android:text="@string/welcome"
             android:textSize="23sp"
@@ -116,7 +116,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout3"
+        android:id="@+id/ListYeuThich"
         android:layout_width="130dp"
         android:layout_height="130dp"
         android:layout_marginStart="45dp"
@@ -180,7 +180,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:background="@drawable/background_home_banner"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+        app:layout_constraintTop_toBottomOf="@+id/ListYeuThich">
 
         <androidx.constraintlayout.utils.widget.ImageFilterView
             android:id="@+id/imageView13"
@@ -207,5 +207,12 @@
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/menu"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

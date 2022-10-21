@@ -9,6 +9,8 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.appcompat.widget.AppCompatCheckBox;
+
 import java.util.List;
 
 public class PhimAdapter extends BaseAdapter {
@@ -41,6 +43,7 @@ public class PhimAdapter extends BaseAdapter {
     private class ViewHolder {
         TextView hoTen, moTa;
         ImageView imgView;
+        AppCompatCheckBox yeuThich;
     }
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
@@ -53,6 +56,7 @@ public class PhimAdapter extends BaseAdapter {
             holder.hoTen = (TextView) view.findViewById(R.id.tvTen);
             holder.moTa = (TextView) view.findViewById(R.id.tvMoTa);
             holder.imgView = (ImageView) view.findViewById(R.id.imgAvt);
+            holder.yeuThich = (AppCompatCheckBox) view.findViewById(R.id.checkBoxYeuThich);
             view.setTag(holder);
         }
         else {
@@ -64,6 +68,7 @@ public class PhimAdapter extends BaseAdapter {
         holder.hoTen.setText(phim.getHoTen());
         holder.moTa.setText(phim.getMoTa());
         holder.imgView.setImageResource(phim.getImg());
+        holder.yeuThich.setChecked(phim.isYeuThich());
 
         return  view;
     }
